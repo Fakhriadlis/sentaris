@@ -424,6 +424,22 @@
       .trust-item:hover { transform: translateY(-3px) scale(1.03); }
       .trust-item .ck { width: 22px; height: 22px; margin: 0; }
       @media (prefers-reduced-motion: reduce) { .trust-item { animation: none; } }
+      /* ===== Floating hero card ===== */
+      #home { margin-bottom: 24px; }
+      .hero-bgbox { position: absolute; inset: 0; z-index: 0; border-radius: 36px; overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,16,110,.25), 0 50px 90px -40px rgba(0,16,110,.6); }
+      @media (min-width: 768px) { .hero-bgbox { border-radius: 52px; } }
+      .hero-stats { position: relative; margin-bottom: -72px; }
+      @media (max-width: 767px) { .hero-stats { margin-bottom: -150px; } #home { margin-bottom: 70px; } }
+      .glass-card {
+        background: linear-gradient(180deg, #ffffff 0%, #f3f6fc 100%);
+        -webkit-backdrop-filter: none; backdrop-filter: none; border: 1px solid rgba(15,23,42,.06);
+        box-shadow: inset 0 1px 0 #fff, 0 2px 6px rgba(15,23,42,.06), 0 30px 50px -24px rgba(0,16,110,.45);
+      }
+      .glass-card::before { background: linear-gradient(180deg, rgba(0,85,230,.06), rgba(0,85,230,0)); }
+      .glass-card > div:first-child { color: #64748b !important; }
+      .glass-card > div:nth-child(2) { background: linear-gradient(180deg, #0a2fb0 0%, #00106e 100%); -webkit-background-clip: text; background-clip: text; }
+      .glass-card > p { color: #475569 !important; }
     </style>
   </head>
   <body class="bg-slate-50 text-slate-800 antialiased selection:bg-[#3de2ff] selection:text-slate-900">
@@ -497,18 +513,15 @@
             target="_blank"
             class="w-full btn-glass text-[#00106e] font-bold py-2.5 rounded-xl text-center block text-sm shadow-md"
           >
-            Coba Gratis 5 Hari 
+            Coba Gratis 5 Hari
           </a>
         </div>
       </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section
-      id="home"
-      class="hero-bg pt-32 sm:pt-40 pb-20 sm:pb-28 px-4 sm:px-6 rounded-b-[40px] md:rounded-b-[60px] text-center text-white relative overflow-hidden shadow-2xl"
-    >
-      <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+    <section id="home" class="hero-shell relative mx-3 sm:mx-5 mt-3 sm:mt-4 pt-32 sm:pt-40 pb-0 px-4 sm:px-6 text-center text-white">
+      <div class="hero-bgbox hero-bg" aria-hidden="true"><div class="absolute inset-0 hero-glow pointer-events-none"></div></div>
 
       <div class="max-w-5xl mx-auto space-y-6 relative z-10">
         <!-- Sub-heading Pill -->
@@ -603,7 +616,7 @@
         </div>
 
         <!-- STATS PILLS GRID IN HERO -->
-        <div class="mt-10 max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 px-2">
+        <div class="hero-stats mt-10 max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 px-2">
           <div class="glass-card text-left">
             <div class="text-[11px] uppercase tracking-wider text-white/70 font-semibold">Multi-WhatsApp</div>
             <div class="text-2xl sm:text-3xl font-extrabold mt-1 text-white">50+ Nomor</div>
@@ -1379,12 +1392,12 @@
           <div class="mt-4 space-y-3">
             <a href="https://wa.me/6281231333316" target="_blank" rel="noopener noreferrer" class="ft-card">
               <span class="ft-lab">WhatsApp</span>
-              
+              <span class="ft-val">+62 812-3133-3316</span>
               <span class="ft-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
             </a>
             <a href="https://playbook.sentaris.cloud/" target="_blank" rel="noopener noreferrer" class="ft-card">
               <span class="ft-lab">Demo Playbook</span>
-             
+              <span class="ft-val">playbook.sentaris.cloud</span>
               <span class="ft-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
             </a>
           </div>
