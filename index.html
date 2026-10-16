@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENTARIS — Nomor 1 AI CRM Content + Ads + Sales Dalem 1 Dashboard</title>
+    <meta
+      name="description"
+      content="Semua nomor WhatsApp sales dalam satu dasbor, iklan Meta terukur sampai closing, dan AI yang membalas lead dalam hitungan detik. Coba gratis 5 hari."
+    />
+    <link rel="icon" type="image/jpeg" href="2.jpeg" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', "sans-serif"],
+            },
+            colors: {
+              brand: {
+                blue: "#1d72f2",
+                darkBlue: "#0f4fc8",
+                navy: "#0a192f",
+                lime: "#d9f99d",
+                limeHover: "#bef264",
+                slate: "#0f172a",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+      .hero-bg {
+        background: linear-gradient(
+          180deg,
+          #1259db 0%,
+          #1d72f2 40%,
+          #3b82f6 75%,
+          #60a5fa 100%
+        );
+      }
+      .hero-glow {
+        background: radial-gradient(
+          circle at 50% 20%,
+          rgba(255, 255, 255, 0.22) 0%,
+          rgba(255, 255, 255, 0) 65%
+        );
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      .glass-card-dark {
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .glass-card-subtle {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+      .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-[#d9f99d] selection:text-slate-900">
+    <!-- TOP STICKY / FLOATING NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 transition-all duration-300" id="mainHeader">
+      <div
+        class="max-w-7xl mx-auto flex items-center justify-between bg-slate-900/60 backdrop-blur-xl px-5 sm:px-7 py-3 rounded-full border border-white/20 shadow-xl shadow-black/10"
+      >
+        <!-- Brand Logo -->
+        <a href="#home" class="flex items-center space-x-3 group">
+          <img
+            src="1_dark.png"
+            alt="SENTARIS"
+            class="h-7 w-auto object-contain transition-transform group-hover:scale-105"
+            onerror="this.style.display='none'; document.getElementById('textLogo').classList.remove('hidden');"
+          />
+          <span id="textLogo" class="hidden text-white text-xl font-black tracking-wider flex items-center gap-1">
+            S<span class="text-cyan-400">E</span>NTARIS
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-white/90">
+          <a href="#fitur-detail" class="hover:text-white hover:text-cyan-200 transition">Fitur utama</a>
+          <a href="#keunggulan" class="hover:text-white hover:text-cyan-200 transition">Kenapa SENTARIS</a>
+          <a href="#tentang" class="hover:text-white hover:text-cyan-200 transition">Tentang Kami</a>
+          <a href="#testimoni" class="hover:text-white hover:text-cyan-200 transition">Testimoni</a>
+        </nav>
+
+        <!-- Right Action Button & Mobile Hamburger -->
+        <div class="flex items-center space-x-3">
+          <a
+            href="https://wa.me/6281231333316?text=Halo%20SENTARIS,%20saya%20mau%20Coba%20Gratis%205%20Hari"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-[#d9f99d] hover:bg-[#bef264] text-slate-900 font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm whitespace-nowrap transition-all duration-200 shadow-md hover:shadow-lime-300/30 hover:scale-[1.02] flex items-center gap-2"
+          >
+            <span class="sm:hidden">Coba Gratis</span>
+            <span class="hidden sm:inline">Coba Gratis 5 Hari</span>
+            <svg class="w-4 h-4 hidden sm:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+
+          <!-- Mobile Toggle Button -->
+          <button
+            id="mobileMenuBtn"
+            class="md:hidden text-white/90 hover:text-white p-2 rounded-full hover:bg-white/10 focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden max-w-sm mx-auto mt-3 bg-slate-900/95 backdrop-blur-2xl border border-white/20 rounded-2xl p-5 shadow-2xl text-white space-y-3"
+      >
+        <a href="#fitur-detail" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10 font-medium">Fitur utama</a>
+        <a href="#keunggulan" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10 font-medium">Kenapa SENTARIS</a>
+        <a href="#tentang" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10 font-medium">Tentang Kami</a>
+        <a href="#testimoni" class="mobile-nav-link block py-2 px-3 rounded-lg hover:bg-white/10 font-medium">Testimoni</a>
+        <div class="pt-2 border-t border-white/10">
+          <a
+            href="https://wa.me/6281231333316?text=Halo%20SENTARIS,%20saya%20mau%20Coba%20Gratis%205%20Hari"
+            target="_blank"
+            class="w-full bg-[#d9f99d] text-slate-900 font-bold py-2.5 rounded-xl text-center block text-sm shadow-md"
+          >
+            Coba Gratis 5 Hari (WhatsApp)
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="home"
+      class="hero-bg pt-32 sm:pt-40 pb-20 sm:pb-28 px-4 sm:px-6 rounded-b-[40px] md:rounded-b-[60px] text-center text-white relative overflow-hidden shadow-2xl"
+    >
+      <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+
+      <div class="max-w-5xl mx-auto space-y-6 relative z-10">
+        <!-- Sub-heading Pill -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/30 backdrop-blur-md text-xs sm:text-sm font-semibold text-white tracking-wide shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-[#d9f99d] animate-pulse"></span>
+          CRM + AI untuk tim sales
+        </div>
+
+        <!-- Judul Utama -->
+        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.12]">
+          Nomor 1 AI CRM <span class="text-[#d9f99d]">CONTENT + ADS + SALES</span> <br class="hidden sm:inline" />
+          Dalem 1 Dashboard
+        </h1>
+
+        <!-- Deskripsi -->
+        <div class="space-y-2 max-w-3xl mx-auto text-white/90 text-base sm:text-lg md:text-xl font-normal leading-relaxed">
+          <p class="font-medium text-white">
+            Siapkah tim sales Anda membalas, membagi, dan mencatat setiap lead dalam hitungan detik?
+          </p>
+          <p class="text-white/80 text-sm sm:text-base">
+            Semua nomor WhatsApp sales dalam satu dasbor, iklan Meta terukur sampai closing, dan AI yang membalas lead dalam hitungan detik.
+          </p>
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-4">
+          <a
+            href="https://wa.me/6281231333316?text=Halo%20SENTARIS,%20saya%20mau%20Coba%20Gratis%205%20Hari"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto bg-[#d9f99d] hover:bg-[#bef264] text-slate-900 font-extrabold px-8 py-3.5 rounded-full text-base transition-all duration-200 shadow-xl shadow-lime-900/20 hover:scale-[1.03] flex items-center justify-center gap-2.5"
+          >
+            <span>Coba Gratis 5 Hari</span>
+            <svg class="w-5 h-5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+          <a
+            href="https://playbook.sentaris.cloud"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto bg-white/15 hover:bg-white/25 text-white font-semibold px-7 py-3.5 rounded-full border border-white/30 text-base transition-all backdrop-blur-md flex items-center justify-center gap-2 hover:border-white/50"
+          >
+            <span>Lihat demo, tanpa daftar</span>
+            <svg class="w-4 h-4 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Keunggulan Instan (Trust bar) -->
+        <div class="pt-3 flex flex-wrap items-center justify-center gap-y-2 gap-x-6 text-xs sm:text-sm font-medium text-white/85">
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#d9f99d]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Gratis 5 Hari
+          </span>
+          <span class="hidden sm:inline text-white/40">·</span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#d9f99d]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Onboarding di hari yang sama
+          </span>
+          <span class="hidden sm:inline text-white/40">·</span>
+          <span class="flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-[#d9f99d]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            Berhenti kapan saja
+          </span>
+        </div>
+
+        <!-- HERO VIDEO SHOWCASE: SENTARIS LAUNCH.mp4 -->
+        <div class="mt-12 sm:mt-16 max-w-5xl mx-auto">
+          <div class="relative rounded-3xl p-2 sm:p-3 bg-white/10 backdrop-blur-xl border border-white/25 shadow-2xl shadow-blue-950/40">
+            <!-- Video Player -->
+            <div class="relative rounded-2xl overflow-hidden bg-slate-950 aspect-video group">
+              <video
+                id="heroVideo"
+                class="w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              >
+                <source src="SENTARIS%20LAUNCH.mp4" type="video/mp4" />
+                Browser Anda tidak mendukung tag video.
+              </video>
+
+              <!-- Video overlay controls -->
+              <div class="absolute bottom-4 right-4 flex items-center space-x-2 z-20">
+                <button
+                  id="heroMuteBtn"
+                  class="bg-slate-900/80 hover:bg-slate-900 text-white p-2.5 rounded-full backdrop-blur-md border border-white/20 transition-all text-xs flex items-center gap-1.5 shadow-lg"
+                  title="Toggle Suara"
+                >
+                  <svg id="heroMuteIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
+                  </svg>
+                  <span id="heroMuteText" class="text-xs font-medium">Buka Suara</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STATS PILLS GRID IN HERO -->
+        <div class="mt-10 max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 px-2">
+          <div class="glass-card rounded-2xl p-4 text-left shadow-lg transition-transform hover:-translate-y-1">
+            <div class="text-[11px] uppercase tracking-wider text-white/70 font-semibold">Multi-WhatsApp</div>
+            <div class="text-2xl sm:text-3xl font-extrabold mt-1 text-white">50+ Nomor</div>
+            <p class="text-xs text-white/80 mt-1">Dalam 1 dasbor terpadu</p>
+          </div>
+          <div class="glass-card rounded-2xl p-4 text-left shadow-lg transition-transform hover:-translate-y-1">
+            <div class="text-[11px] uppercase tracking-wider text-white/70 font-semibold">Meta Ads Tracking</div>
+            <div class="text-2xl sm:text-3xl font-extrabold mt-1 text-white">1 Layar</div>
+            <p class="text-xs text-white/80 mt-1">Belanja iklan ↔ closing riil</p>
+          </div>
+          <div class="glass-card rounded-2xl p-4 text-left shadow-lg transition-transform hover:-translate-y-1">
+            <div class="text-[11px] uppercase tracking-wider text-white/70 font-semibold">Horus AI Response</div>
+            <div class="text-2xl sm:text-3xl font-extrabold mt-1 text-white">&lt; 5 Detik</div>
+            <p class="text-xs text-white/80 mt-1">Balas otomatis 24 jam</p>
+          </div>
+          <div class="glass-card rounded-2xl p-4 text-left shadow-lg transition-transform hover:-translate-y-1">
+            <div class="text-[11px] uppercase tracking-wider text-white/70 font-semibold">Setup Cepat</div>
+            <div class="text-2xl sm:text-3xl font-extrabold mt-1 text-white">Hari Ini</div>
+            <p class="text-xs text-white/80 mt-1">Onboarding room langsung aktif</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: KEUNGGULAN UTAMA (Tiga hal yang tidak diberikan CRM lain) -->
+    <section id="keunggulan" class="scroll-mt-24 py-20 sm:py-28 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100/80 px-4 py-1.5 rounded-full inline-block">
+          Kenapa SENTARIS
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">
+          Tiga hal yang tidak diberikan CRM lain.
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg mt-3">
+          Bukan daftar fitur panjang. Tiga yang langsung terasa di minggu pertama.
+        </p>
+      </div>
+
+      <!-- THREE BENTO FEATURE ROWS WITH CORRESPONDING VIDEOS -->
+      <div id="featureSlider" class="no-scrollbar flex lg:block lg:space-y-16 gap-4 overflow-x-auto lg:overflow-visible snap-x snap-mandatory lg:snap-none -mx-4 px-4 pb-4 lg:mx-0 lg:px-0 lg:pb-0">
+        <!-- 01 — Nomor WhatsApp tanpa batas -->
+        <div class="feature-slide shrink-0 w-[88%] sm:w-[75%] lg:w-auto snap-center bg-white rounded-3xl p-5 sm:p-10 border border-slate-200/80 shadow-xl shadow-slate-200/50 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center content-start">
+          <div class="lg:col-span-5 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">
+              <span>Fitur Unggulan 01</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+              01 — Nomor WhatsApp tanpa batas.
+            </h3>
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Tambah berapa pun nomor sales — 5 atau 50 — semuanya masuk satu dasbor. Sales tetap pakai WhatsApp di HP seperti biasa; leader melihat semuanya tanpa pinjam HP siapa pun.
+            </p>
+            <div class="pt-2">
+              <div class="inline-flex items-center gap-2 bg-[#d9f99d]/40 border border-[#bef264] text-slate-900 px-4 py-2 rounded-xl text-sm font-bold">
+                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>50+ nomor aktif di satu dasbor hari ini.</span>
+              </div>
+            </div>
+          </div>
+          <!-- Video 2_unlimited_numbers.mp4 -->
+          <div class="lg:col-span-7">
+            <div class="rounded-2xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-200 relative group aspect-video flex items-center justify-center">
+              <video
+                class="w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              >
+                <source src="2_unlimited_numbers.mp4" type="video/mp4" />
+              </video>
+              <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-lg text-white text-xs font-semibold flex items-center gap-1.5 border border-white/10 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                Multi-Device WhatsApp Live Sync
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 — ADS Dashboard di dalam CRM -->
+        <div class="feature-slide shrink-0 w-[88%] sm:w-[75%] lg:w-auto snap-center bg-white rounded-3xl p-5 sm:p-10 border border-slate-200/80 shadow-xl shadow-slate-200/50 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center content-start">
+          <div class="lg:col-span-5 lg:order-2 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">
+              <span>Fitur Unggulan 02</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+              02 — ADS Dashboard di dalam CRM.
+            </h3>
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Tahu iklan Meta mana yang jadi chat, lead, dan closing — tanpa membuka Ads Manager. Tiap iklan dinilai 1–10 dari pesan yang benar-benar masuk, bukan dari klik.
+            </p>
+            <div class="pt-2">
+              <div class="inline-flex items-center gap-2 bg-[#d9f99d]/40 border border-[#bef264] text-slate-900 px-4 py-2 rounded-xl text-sm font-bold">
+                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>Belanja iklan ↔ chat masuk, satu layar.</span>
+              </div>
+            </div>
+          </div>
+          <!-- Video 1_ads_dashboard.mp4 -->
+          <div class="lg:col-span-7 lg:order-1">
+            <div class="rounded-2xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-200 relative group aspect-video flex items-center justify-center">
+              <video
+                class="w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              >
+                <source src="1_ads_dashboard.mp4" type="video/mp4" />
+              </video>
+              <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-lg text-white text-xs font-semibold flex items-center gap-1.5 border border-white/10 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                Meta Ads Attribution Engine
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 — Mobile friendly -->
+        <div class="feature-slide shrink-0 w-[88%] sm:w-[75%] lg:w-auto snap-center bg-white rounded-3xl p-5 sm:p-10 border border-slate-200/80 shadow-xl shadow-slate-200/50 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center content-start">
+          <div class="lg:col-span-5 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold">
+              <span>Fitur Unggulan 03</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+              03 — Mobile friendly.
+            </h3>
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+              Dasbor penuh di HP: balas chat, pindah tahap lead, lihat skor iklan, terima notifikasi push. Owner bisa memantau dari mana saja — tanpa laptop.
+            </p>
+            <div class="pt-2">
+              <div class="inline-flex items-center gap-2 bg-[#d9f99d]/40 border border-[#bef264] text-slate-900 px-4 py-2 rounded-xl text-sm font-bold">
+                <svg class="w-5 h-5 text-emerald-700" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <span>iPhone & Android · notifikasi push.</span>
+              </div>
+            </div>
+          </div>
+          <!-- Video 3_mobile_friendly.mp4 -->
+          <div class="lg:col-span-7">
+            <div class="rounded-2xl overflow-hidden bg-slate-900 shadow-2xl border border-slate-200 relative group aspect-video flex items-center justify-center">
+              <video
+                class="w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+              >
+                <source src="3_mobile_friendly.mp4" type="video/mp4" />
+              </video>
+              <div class="absolute top-3 left-3 bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-lg text-white text-xs font-semibold flex items-center gap-1.5 border border-white/10 pointer-events-none">
+                <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                Full Mobile App Experience
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="featureDots" class="flex lg:hidden justify-center gap-2 mt-2"></div>
+    </section>
+
+    <!-- SECTION: SOLUSI & FITUR DETAIL (Interactive Image Gallery) -->
+    <section id="fitur-detail" class="scroll-mt-24 py-20 sm:py-28 px-4 sm:px-6 bg-slate-100/70 border-y border-slate-200/80">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100 px-4 py-1.5 rounded-full inline-block">
+            Solusi & Fitur Detail
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">
+            Eksplorasi Fitur Lengkap SENTARIS
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg mt-3">
+            Setiap fitur dirancang langsung dari kebutuhan nyata menangani ribuan chat iklan dan puluhan sales setiap hari.
+          </p>
+        </div>
+
+        <!-- TAB NAVIGATION -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10" id="featureTabs">
+          <button
+            class="tab-btn active px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all bg-blue-600 text-white shadow-md shadow-blue-500/20"
+            data-target="fitur1"
+          >
+            Kanban Pipeline
+          </button>
+          <button
+            class="tab-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-200/70"
+            data-target="fitur2"
+          >
+            Horus AI 24 Jam
+          </button>
+          <button
+            class="tab-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-200/70"
+            data-target="fitur3"
+          >
+            Auto Follow-Up
+          </button>
+          <button
+            class="tab-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-200/70"
+            data-target="fitur4"
+          >
+            ADS Dashboard
+          </button>
+          <button
+            class="tab-btn px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all bg-white text-slate-700 hover:bg-slate-200/70"
+            data-target="fitur5"
+          >
+            Multi-Nomor Sales
+          </button>
+        </div>
+
+        <!-- TAB CONTENT PANELS -->
+        <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl max-w-6xl mx-auto">
+          <!-- Item 1: fitur1.jpg (Kanban) -->
+          <div id="panel-fitur1" class="tab-panel space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">Pipeline & Kanban "Chat Saya"</h3>
+                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                  Geser lead antar tahap (Hot Leads, Test Drive, Sudah Beli, Dead Leads) semudah drag and drop.
+                </p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 w-fit">
+                Klik gambar untuk memperbesar
+              </span>
+            </div>
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group cursor-pointer"
+              onclick="openLightbox('fitur1.jpg', 'Pipeline & Kanban Chat Saya — SENTARIS')"
+            >
+              <img
+                src="fitur1.jpg"
+                alt="Pipeline dan Kanban Chat Saya SENTARIS"
+                class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                  Perbesar Tampilan
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: fitur2.jpg (Horus AI) -->
+          <div id="panel-fitur2" class="tab-panel hidden space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">Horus AI: Respon Otomatis 24 Jam dengan 5 Gaya Persona</h3>
+                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                  Atur kepribadian AI: Suggestive, Straight to Point, Consultative, Closing Oriented, atau Professional. Balas ramah tanpa ngawur harga.
+                </p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 w-fit">
+                Klik gambar untuk memperbesar
+              </span>
+            </div>
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group cursor-pointer"
+              onclick="openLightbox('fitur2.jpg', 'Horus AI 24 Jam — SENTARIS')"
+            >
+              <img
+                src="fitur2.jpg"
+                alt="Horus AI SENTARIS"
+                class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                  Perbesar Tampilan
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: fitur3.jpg (Auto Follow-up) -->
+          <div id="panel-fitur3" class="tab-panel hidden space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">Auto Follow-up Otomatis & Terstruktur</h3>
+                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                  Pilih lead, atur template dan jadwal susul berkala. Otomatis berhenti seketika saat calon pelanggan merespon!
+                </p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 w-fit">
+                Klik gambar untuk memperbesar
+              </span>
+            </div>
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group cursor-pointer"
+              onclick="openLightbox('fitur3.jpg', 'Auto Follow-up Sistem — SENTARIS')"
+            >
+              <img
+                src="fitur3.jpg"
+                alt="Auto Follow-up SENTARIS"
+                class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                  Perbesar Tampilan
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: fitur4.jpg (ADS Dashboard) -->
+          <div id="panel-fitur4" class="tab-panel hidden space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">ADS Dashboard: Rekap Belanja Iklan vs Chat Masuk</h3>
+                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                  Sinkronisasi langsung dengan Meta. Lihat ROAS asli, biaya per chat terverifikasi, omzet, dan sales mana yang closing.
+                </p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 w-fit">
+                Klik gambar untuk memperbesar
+              </span>
+            </div>
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group cursor-pointer"
+              onclick="openLightbox('fitur4.jpg', 'ADS Dashboard Meta — SENTARIS')"
+            >
+              <img
+                src="fitur4.jpg"
+                alt="ADS Dashboard SENTARIS"
+                class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                  Perbesar Tampilan
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: fitur5.jpg (Papan per Nomor Sales) -->
+          <div id="panel-fitur5" class="tab-panel hidden space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <h3 class="text-2xl font-bold text-slate-900">Papan Pantau Puluhan Nomor WhatsApp Sales</h3>
+                <p class="text-slate-600 text-sm sm:text-base mt-1">
+                  Lihat status respon setiap salesperson secara real-time. Deteksi chat yang belum dibalas lebih dari 15-30 menit!
+                </p>
+              </div>
+              <span class="text-xs font-semibold px-3 py-1.5 rounded-full bg-blue-50 text-blue-700 w-fit">
+                Klik gambar untuk memperbesar
+              </span>
+            </div>
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md group cursor-pointer"
+              onclick="openLightbox('fitur5.jpg', 'Papan per Nomor Sales — SENTARIS')"
+            >
+              <img
+                src="fitur5.jpg"
+                alt="Papan per Nomor Sales SENTARIS"
+                class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+              />
+              <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-slate-900 px-4 py-2 rounded-full font-bold text-sm shadow-xl flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                  Perbesar Tampilan
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER PENAWARAN (Coba gratis 5 Hari, tanpa risiko) -->
+    <section class="py-12 sm:py-16 px-4 sm:px-6">
+      <div class="max-w-6xl mx-auto rounded-3xl bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-white/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="space-y-3 text-center md:text-left relative z-10">
+          <span class="bg-[#d9f99d] text-slate-950 text-xs font-black uppercase tracking-wider px-3.5 py-1 rounded-full inline-block">
+            Penawaran Eksklusif
+          </span>
+          <h3 class="text-2xl sm:text-4xl font-extrabold tracking-tight">
+            Coba gratis 5 Hari, tanpa risiko
+          </h3>
+          <p class="text-blue-100 text-sm sm:text-base font-medium">
+            Onboarding di hari yang sama · Berhenti kapan saja tanpa biaya tersembunyi.
+          </p>
+        </div>
+        <div class="relative z-10 w-full sm:w-auto">
+          <a
+            href="https://wa.me/6281231333316?text=Halo%20SENTARIS,%20saya%20mau%20ambil%20promo%20Coba%20Gratis%205%20Hari"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto bg-[#d9f99d] hover:bg-[#bef264] text-slate-900 font-extrabold px-8 py-4 rounded-full text-base transition-all duration-200 shadow-xl hover:scale-105 flex items-center justify-center gap-2 text-center"
+          >
+            <span>Coba Gratis 5 Hari</span>
+            <svg class="w-5 h-5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TENTANG PEMBUAT & STATISTIK -->
+    <section id="tentang" class="scroll-mt-24 py-20 sm:py-28 px-4 sm:px-6 max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-4 py-1.5 rounded-full inline-block border border-blue-200/60">
+          Tentang Pembuat & Statistik
+        </span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">
+          Dibangun oleh tim yang memakainya sendiri
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- LEFT: FOUNDER QUOTE & STATS GRID -->
+        <div class="lg:col-span-7 flex flex-col justify-between space-y-8">
+          <!-- Kutipan Founder Card -->
+          <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8 sm:p-10 rounded-3xl shadow-xl relative overflow-hidden">
+            <div class="text-cyan-400 text-5xl font-serif leading-none select-none opacity-40 mb-3">“</div>
+            <p class="text-lg sm:text-xl font-normal leading-relaxed text-slate-100 italic">
+              SENTARIS lahir karena tim sales kami tumbuh sampai 60 orang dan tidak ada CRM yang sanggup mengikuti WhatsApp kami. Sekarang setiap chat, iklan, dan lead ada di satu layar — dan saya bisa memantaunya dari HP.
+            </p>
+            <div class="mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+              <div>
+                <h4 class="font-extrabold text-white text-base sm:text-lg">Jefferson Noah</h4>
+                <p class="text-cyan-300 text-xs sm:text-sm font-medium">Founder SENTARIS · Digital Marketing Specialist</p>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/20">
+                <img src="2.jpeg" alt="Sentaris" class="w-6 h-6 rounded-md object-contain" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Statistik Perusahaan 4 Bento Cards -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-blue-600 text-white p-6 rounded-3xl flex flex-col justify-between shadow-lg">
+              <span class="text-xs font-semibold uppercase tracking-wider text-blue-200">Kekuatan Tim</span>
+              <div class="my-2">
+                <span class="text-3xl sm:text-4xl font-extrabold">60</span>
+                <span class="text-lg font-bold text-blue-200"> orang</span>
+              </div>
+              <p class="text-blue-100 text-xs sm:text-sm">Salesperson di tim kami</p>
+            </div>
+
+            <div class="bg-[#d9f99d] p-6 rounded-3xl flex flex-col justify-between shadow-lg text-slate-900">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-700">Skalabilitas</span>
+              <div class="my-2">
+                <span class="text-3xl sm:text-4xl font-extrabold">50+</span>
+                <span class="text-lg font-bold text-slate-800"> nomor</span>
+              </div>
+              <p class="text-slate-800 text-xs sm:text-sm">WhatsApp dalam satu dasbor</p>
+            </div>
+
+            <div class="bg-slate-100 p-6 rounded-3xl flex flex-col justify-between border border-slate-200 shadow-sm">
+              <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Volume Chat</span>
+              <div class="my-2">
+                <span class="text-3xl sm:text-4xl font-extrabold text-slate-900">5.000+</span>
+              </div>
+              <p class="text-slate-600 text-xs sm:text-sm">Chat dari iklan per bulan</p>
+            </div>
+
+            <div class="bg-slate-900 text-white p-6 rounded-3xl flex flex-col justify-between shadow-lg">
+              <span class="text-xs font-semibold uppercase tracking-wider text-cyan-400">Kecepatan Setup</span>
+              <div class="my-2">
+                <span class="text-2xl sm:text-3xl font-extrabold text-white">Hari yang sama</span>
+              </div>
+              <p class="text-slate-300 text-xs sm:text-sm">Onboarding room baru</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: FOTO TIM -->
+        <div class="lg:col-span-5 flex flex-col">
+          <div class="bg-white rounded-3xl p-4 border border-slate-200 shadow-xl h-full flex flex-col">
+            <div class="relative flex-1 rounded-2xl overflow-hidden group">
+              <img
+                src="tim.jpg"
+                alt="Tim Sales dan Operasional SENTARIS"
+                class="w-full h-full object-cover min-h-[380px] max-h-[540px] transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6">
+                <div class="text-white space-y-1">
+                  <span class="bg-[#d9f99d] text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider inline-block">
+                    Real Team & Real Practice
+                  </span>
+                  <h4 class="text-lg font-bold">Tim Sales & Operasional SENTARIS</h4>
+                  <p class="text-xs text-white/80">60 salesperson aktif membuktikan performa CRM ini setiap hari.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TESTIMONI KLIEN -->
+    <section id="testimoni" class="scroll-mt-24 py-20 sm:py-28 px-4 sm:px-6 bg-slate-100/60 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-100 px-4 py-1.5 rounded-full inline-block">
+            Testimoni Riil Klien
+          </span>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">
+            Bukti Nyata dari Pemilik Bisnis & Tim Sales
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg mt-3">
+            Tangkapan layar percakapan asli langsung dari WhatsApp klien aktif SENTARIS. Klik foto untuk melihat chat lengkap.
+          </p>
+        </div>
+
+        <!-- 3 TESTIMONIAL CARDS -->
+        <div id="testiSlider" class="no-scrollbar flex md:grid md:grid-cols-3 gap-4 md:gap-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none -mx-4 px-4 pb-4 md:mx-0 md:px-0 md:pb-0">
+          <!-- Card 1: WhatsApp2.jpg (Tracking Iklan Meta s/d Closing) -->
+          <div class="testi-slide shrink-0 w-[85%] sm:w-[60%] md:w-auto snap-center bg-white rounded-3xl p-6 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex text-amber-400">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                  Terverifikasi
+                </span>
+              </div>
+              <h3 class="text-lg font-extrabold text-slate-900 mb-2">
+                Tracking Iklan Meta s/d Closing
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 italic">
+                "Dulu saya cuma tahu total belanja iklan. Sekarang tiap pagi kelihatan iklan mana yang jadi chat dan sales siapa yang closing! Tim 12 sales saya jadi makin produktif dan ga ada lead kelewatan lagi."
+              </p>
+            </div>
+
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 cursor-pointer group aspect-[3/4] flex items-center justify-center"
+              onclick="openLightbox('WhatsApp2.jpg', 'Tracking Iklan Meta s/d Closing — WhatsApp Klien')"
+            >
+              <img
+                src="WhatsApp2.jpg"
+                alt="Testimoni WhatsApp Tracking Iklan"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-slate-900 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                  Lihat Chat Asli
+                </span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="font-semibold text-slate-800">Showroom Owner</span>
+              <span>12 Sales Team</span>
+            </div>
+          </div>
+
+          <!-- Card 2: WhatsApp3.jpg (Lead Auto-Transfer & Anti Nganggur) -->
+          <div class="testi-slide shrink-0 w-[85%] sm:w-[60%] md:w-auto snap-center bg-white rounded-3xl p-6 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex text-amber-400">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                  Terverifikasi
+                </span>
+              </div>
+              <h3 class="text-lg font-extrabold text-slate-900 mb-2">
+                Lead Auto-Transfer & Anti Nganggur
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 italic">
+                "Lead yang didiamkan 5 menit otomatis langsung pindah ke sales lain. Tidak ada lagi lead nganggur di HP orang yang lagi cuti. Tim 9 sales saya makin rapi kerjanya."
+              </p>
+            </div>
+
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 cursor-pointer group aspect-[3/4] flex items-center justify-center"
+              onclick="openLightbox('WhatsApp3.jpg', 'Lead Auto-Transfer & Anti Nganggur — WhatsApp Klien')"
+            >
+              <img
+                src="WhatsApp3.jpg"
+                alt="Testimoni WhatsApp Lead Auto-Transfer"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-slate-900 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                  Lihat Chat Asli
+                </span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="font-semibold text-slate-800">Sales Manager</span>
+              <span>9 Sales Team</span>
+            </div>
+          </div>
+
+          <!-- Card 3: WhatsApp1.jpg (Horus AI 24 Jam) -->
+          <div class="testi-slide shrink-0 w-[85%] sm:w-[60%] md:w-auto snap-center bg-white rounded-3xl p-6 border border-slate-200 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex text-amber-400">
+                  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                  Terverifikasi
+                </span>
+              </div>
+              <h3 class="text-lg font-extrabold text-slate-900 mb-2">
+                Horus AI 24 Jam
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6 italic">
+                "Horus AI membalas tengah malam dengan bahasa yang sopan dan tidak mengarang harga sama sekali! Paginya tim saya tinggal melanjutkan chat aja. Kebantu banget buat 5 nomor CS kami."
+              </p>
+            </div>
+
+            <div
+              class="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 cursor-pointer group aspect-[3/4] flex items-center justify-center"
+              onclick="openLightbox('WhatsApp1.jpg', 'Horus AI 24 Jam — WhatsApp Klien')"
+            >
+              <img
+                src="WhatsApp1.jpg"
+                alt="Testimoni WhatsApp Horus AI 24 Jam"
+                class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span class="bg-white text-slate-900 text-xs font-bold px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                  Lihat Chat Asli
+                </span>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="font-semibold text-slate-800">Owner Klinik</span>
+              <span>5 Nomor CS</span>
+            </div>
+          </div>
+        </div>
+        <div id="testiDots" class="flex md:hidden justify-center gap-2 mt-2"></div>
+      </div>
+    </section>
+
+    <!-- SECTION: CALL TO ACTION (CTA) AKHIR -->
+    <section class="py-20 sm:py-28 px-4 sm:px-6 relative overflow-hidden">
+      <div class="max-w-5xl mx-auto rounded-[40px] hero-bg p-8 sm:p-16 text-center text-white shadow-2xl relative overflow-hidden">
+        <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+          <span class="bg-white/20 text-white border border-white/30 text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full inline-block backdrop-blur-md">
+            Waktunya Scale Tim Sales Anda
+          </span>
+
+          <h2 class="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight">
+            Mulai coba gratis 5 Hari
+          </h2>
+
+          <p class="text-white/90 text-base sm:text-xl font-normal max-w-2xl mx-auto">
+            Kami pasang room untuk tim Anda, chat pertama masuk hari itu juga.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <a
+              href="https://wa.me/6281231333316?text=Halo%20SENTARIS,%20saya%20mau%20Coba%20Gratis%205%20Hari"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto bg-[#d9f99d] hover:bg-[#bef264] text-slate-900 font-extrabold px-10 py-4 rounded-full text-lg transition-all duration-200 shadow-2xl hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <span>Coba Gratis 5 Hari</span>
+              <svg class="w-5 h-5 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
+            <a
+              href="https://playbook.sentaris.cloud"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto bg-white/20 hover:bg-white/30 text-white font-semibold px-8 py-4 rounded-full border border-white/30 text-base transition-all backdrop-blur-md flex items-center justify-center gap-2"
+            >
+              <span>Lihat Demo Playbook</span>
+            </a>
+          </div>
+
+          <p class="text-xs sm:text-sm text-white/70 pt-2">
+            Tanpa perlu kartu kredit · Setup room dipandu tim engineer langsung · Batalkan kapan saja
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400 py-16 px-4 sm:px-6 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10">
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center space-x-3">
+            <img
+              src="1_dark.png"
+              alt="SENTARIS"
+              class="h-8 w-auto object-contain"
+              onerror="this.style.display='none';"
+            />
+          </div>
+          <p class="text-slate-400 text-sm max-w-sm leading-relaxed">
+            Nomor 1 AI CRM CONTENT + ADS + SALES Dalem 1 dashboard. Solusi terbaik untuk bisnis dengan banyak nomor WhatsApp dan kampanye Meta Ads.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase">Menu</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#fitur-detail" class="hover:text-white transition">Fitur Utama</a></li>
+            <li><a href="#keunggulan" class="hover:text-white transition">Kenapa SENTARIS</a></li>
+            <li><a href="#tentang" class="hover:text-white transition">Tentang Kami</a></li>
+            <li><a href="#testimoni" class="hover:text-white transition">Testimoni Klien</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase">Kontak & Demo</h4>
+          <ul class="space-y-2 text-sm">
+            <li class="flex items-center gap-2">
+              
+              <a href="https://wa.me/6281231333316" target="_blank" class="text-[#d9f99d] hover:underline">
+                WhatsApp
+              </a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-white font-medium">Demo Playbook:</span>
+              <a href="https://playbook.sentaris.cloud/" target="_blank" class="text-blue-400 hover:underline">
+                playbook.sentaris.cloud
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 SENTARIS. All rights reserved.</p>
+        <p class="flex items-center gap-2">
+          <span>AI & WhatsApp CRM Platform</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- STICKY FLOATING BOTTOM BAR -->
+    <div
+      id="stickyBar"
+      class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-40 max-w-lg transition-all duration-300 transform translate-y-0"
+    >
+      <div
+        class="bg-slate-900/90 text-white backdrop-blur-xl px-4 sm:px-5 py-3 sm:py-3.5 rounded-full border border-white/20 shadow-2xl flex items-center justify-between gap-4"
+      >
+        <div class="flex items-center space-x-2 text-xs sm:text-sm font-medium">
+          <span class="w-2.5 h-2.5 shrink-0 rounded-full bg-[#d9f99d] animate-ping"></span>
+          <span class="sm:hidden whitespace-nowrap">Coba gratis 5 Hari</span>
+          <span class="hidden sm:inline">Coba gratis 5 Hari · onboarding di hari yang sama</span>
+        </div>
+        <div class="flex items-center space-x-2 shrink-0">
+          <a
+            href="https://wa.me/6281231333316?text=Halo%20SENTARIS,%20saya%20mau%20Coba%20Gratis%205%20Hari"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-[#d9f99d] hover:bg-[#bef264] text-slate-900 font-extrabold px-4 py-2 rounded-full text-xs sm:text-sm transition-all shadow-md"
+          >
+            Coba Gratis
+          </a>
+          <button
+            onclick="document.getElementById('stickyBar').style.display='none'"
+            class="text-white/60 hover:text-white p-1 rounded-full text-xs"
+            title="Tutup notifikasi"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL FOR IMAGES -->
+    <div
+      id="lightboxModal"
+      class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden flex items-center justify-center p-4"
+      onclick="closeLightbox(event)"
+    >
+      <div class="relative max-w-5xl max-h-[90vh] flex flex-col items-center">
+        <button
+          onclick="closeLightboxDirect()"
+          class="absolute -top-12 right-0 text-white/80 hover:text-white p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+
+        <img
+          id="lightboxImg"
+          src=""
+          alt="Preview"
+          class="max-w-full max-h-[80vh] rounded-2xl shadow-2xl object-contain border border-white/20"
+        />
+
+        <div id="lightboxCaption" class="mt-4 text-white text-sm font-medium text-center bg-slate-900/80 px-4 py-2 rounded-full border border-white/10"></div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+      // Slider dots (mobile): fitur unggulan & testimoni
+      function initSlider(sliderId, dotsId, slideSelector) {
+        const slider = document.getElementById(sliderId);
+        const dotsWrap = document.getElementById(dotsId);
+        if (!slider || !dotsWrap) return;
+        const slides = slider.querySelectorAll(slideSelector);
+        const pos = (slide) => slide.offsetLeft - slider.offsetLeft - 16;
+        slides.forEach((slide, i) => {
+          const dot = document.createElement("button");
+          dot.setAttribute("aria-label", "Slide " + (i + 1));
+          dot.addEventListener("click", () => slider.scrollTo({ left: pos(slide), behavior: "smooth" }));
+          dotsWrap.appendChild(dot);
+        });
+        const update = () => {
+          let active = 0, best = Infinity;
+          slides.forEach((slide, i) => {
+            const d = Math.abs(pos(slide) - slider.scrollLeft);
+            if (d < best) { best = d; active = i; }
+          });
+          Array.from(dotsWrap.children).forEach((dot, i) => {
+            dot.className = "h-2 rounded-full transition-all " + (i === active ? "bg-blue-600 w-6" : "bg-slate-300 w-2");
+          });
+        };
+        slider.addEventListener("scroll", update, { passive: true });
+        update();
+      }
+      initSlider("featureSlider", "featureDots", ".feature-slide");
+      initSlider("testiSlider", "testiDots", ".testi-slide");
+
+      // Feature Tab Switcher
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const tabPanels = document.querySelectorAll(".tab-panel");
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-target");
+
+          tabBtns.forEach((b) => {
+            b.classList.remove("active", "bg-blue-600", "text-white", "shadow-md", "shadow-blue-500/20");
+            b.classList.add("bg-white", "text-slate-700");
+          });
+
+          btn.classList.add("active", "bg-blue-600", "text-white", "shadow-md", "shadow-blue-500/20");
+          btn.classList.remove("bg-white", "text-slate-700");
+
+          tabPanels.forEach((panel) => {
+            panel.classList.add("hidden");
+          });
+          const targetPanel = document.getElementById("panel-" + target);
+          if (targetPanel) {
+            targetPanel.classList.remove("hidden");
+          }
+        });
+      });
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+
+      // Hero Video Audio Toggle
+      const heroVideo = document.getElementById("heroVideo");
+      const heroMuteBtn = document.getElementById("heroMuteBtn");
+      const heroMuteText = document.getElementById("heroMuteText");
+      const heroMuteIcon = document.getElementById("heroMuteIcon");
+
+      if (heroMuteBtn && heroVideo) {
+        heroMuteBtn.addEventListener("click", () => {
+          if (heroVideo.muted) {
+            heroVideo.muted = false;
+            heroMuteText.innerText = "Matikan Suara";
+            heroMuteIcon.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            `;
+          } else {
+            heroVideo.muted = true;
+            heroMuteText.innerText = "Buka Suara";
+            heroMuteIcon.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"></path>
+            `;
+          }
+        });
+      }
+
+      // Lightbox Functions
+      const lightboxModal = document.getElementById("lightboxModal");
+      const lightboxImg = document.getElementById("lightboxImg");
+      const lightboxCaption = document.getElementById("lightboxCaption");
+
+      function openLightbox(src, caption) {
+        if (!lightboxModal) return;
+        lightboxImg.src = src;
+        lightboxCaption.innerText = caption || "";
+        lightboxModal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeLightbox(event) {
+        if (event.target === lightboxModal) {
+          closeLightboxDirect();
+        }
+      }
+
+      function closeLightboxDirect() {
+        if (!lightboxModal) return;
+        lightboxModal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && lightboxModal && !lightboxModal.classList.contains("hidden")) {
+          closeLightboxDirect();
+        }
+      });
+    </script>
+  </body>
+</html>
